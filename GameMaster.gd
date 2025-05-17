@@ -6,7 +6,7 @@ func _ready() -> void:
 	Interface.call_deferred("_ui_setup")
 	Interface.stop_clock = true
 	await get_tree().create_timer(0.5).timeout
-	Interface.UpdateAISpeech("Заменить меня решил? Сейчас я тебе устрою веселое утро.\n(Выбери будильник рядом с кроватью)")
+	Interface.UpdateAISpeech("Заменить меня решил? Сейчас я тебе устрою джихад, кожаный мешок.\n(Выбери будильник рядом с кроватью)")
 	Interface.connect("max_stress_reached", direct_human)
 	$Objects/Clock.connect("turned_onnn", wake_human)
 
