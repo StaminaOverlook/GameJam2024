@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="WomanJam2024"
+config/name="Manjam2024"
 run/main_scene="res://Scripts/UI/Main Menu.tscn"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
