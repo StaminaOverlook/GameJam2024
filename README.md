@@ -57,3 +57,7 @@ In this PR we've added new phrases to diversify the gameplay and enhance player 
 
 List of changes:
 - Added 15 new phrases for "evil-AI" NPC.
+
+### #011
+`Makashov Gleb (1.2), Makarov Alex (1.1)`
+-add 4 new phrases for "AI".
