@@ -1,0 +1,58 @@
+[gd_scene load_steps=11 format=3 uid="uid://xf2kbk82p0gr"]
+
+[ext_resource type="PackedScene" uid="uid://btjcktrnlkns5" path="res://Scripts/Objects/Object.tscn" id="1_je2nl"]
+[ext_resource type="Texture2D" uid="uid://bf770b0as0w1m" path="res://Assets/Objects/MusicBox.png" id="2_1a41i"]
+[ext_resource type="Script" uid="uid://bg32ejgmt347f" path="res://Scripts/Objects/Objects/Toilet.gd" id="3_ni3a5"]
+[ext_resource type="Script" uid="uid://diox8oyhst3e8" path="res://Scripts/Objects/ObjectAction.gd" id="3_xbkbs"]
+[ext_resource type="FontFile" uid="uid://bp625sncpuuld" path="res://Assets/UI/CustomFontTtf16H30ForPaint.ttf" id="4_n3kel"]
+
+[sub_resource type="Resource" id="Resource_mnp51"]
+script = ExtResource("3_xbkbs")
+Name = "Запустить приставку"
+Description = "Теперь я захватил твой разум на несколько часов вперёд"
+player_function_name = "Toggle"
+npc_function_name = "Toggle"
+
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1gfws"]
+bg_color = Color(0.839216, 0.85098, 0.886275, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 3
+shadow_offset = Vector2(0, 3)
+
+
+[node name="Object" instance=ExtResource("1_je2nl")]
+texture_normal = ExtResource("2_1a41i")
+texture_pressed = ExtResource("2_1a41i")
+texture_hover = ExtResource("2_1a41i")
+texture_disabled = ExtResource("2_1a41i")
+script = ExtResource("3_ni3a5")
+Name = "GameConsole"
+Actions = Array[ExtResource("3_xbkbs")]([SubResource("Resource_mnp51"), SubResource("Resource_8gh2n")])
+
+[node name="FlowContainer" parent="." index="2"]
+offset_left = -11.7857
+offset_top = -49.6552
+offset_right = 121.214
+offset_bottom = -9.65515
+
+[node name="TurnOn" type="Button" parent="FlowContainer" index="0"]
+layout_mode = 2
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_n3kel")
+theme_override_font_sizes/font_size = 14
+theme_override_styles/hover = SubResource("StyleBoxFlat_7l5uy")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_1gfws")
+theme_override_styles/normal = SubResource("StyleBoxFlat_uwuuk")
+text = "Запустить приставку"
+
+
+[connection signal="pressed" from="FlowContainer/TurnOn" to="." method="Toggle" binds= [0]]
+[connection signal="pressed" from="FlowContainer/TurnOff" to="." method="Toggle" binds= [1]]
