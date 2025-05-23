@@ -60,3 +60,4 @@ List of changes:
 
 ### #011
 `Makashov Gleb (1.2), Makarov Alex (1.1)`
+-add 4 new phrases for "AI".
