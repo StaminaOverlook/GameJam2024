@@ -1,0 +1,103 @@
+[gd_scene load_steps=10 format=3 uid="uid://dt5nnyuflnitu"]
+
+[ext_resource type="PackedScene" uid="uid://btjcktrnlkns5" path="res://Scripts/Objects/Object.tscn" id="1_6kidm"]
+[ext_resource type="Texture2D" uid="uid://bbpdllxvmkmja" path="res://Assets/Objects/sir11.png" id="2_6kidm"]
+[ext_resource type="Script" uid="uid://cmklju1612coa" path="res://Scripts/Objects/Objects/CoffeeMaker.gd" id="3_jw21p"]
+[ext_resource type="Script" uid="uid://diox8oyhst3e8" path="res://Scripts/Objects/ObjectAction.gd" id="4_sfwkh"]
+[ext_resource type="FontFile" uid="uid://bp625sncpuuld" path="res://Assets/UI/CustomFontTtf16H30ForPaint.ttf" id="5_tbpip"]
+
+[sub_resource type="Resource" id="Resource_a4bpl"]
+script = ExtResource("4_sfwkh")
+Name = "ПАНИКА"
+Description = "Звук сирены обязательно выбьет тебя из колеи"
+player_function_name = "Toggle"
+npc_function_name = "Toggle"
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dldhf"]
+bg_color = Color(0.960784, 0.960784, 0.960784, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 6
+shadow_offset = Vector2(0, 3)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oj7jo"]
+bg_color = Color(0.839216, 0.85098, 0.886275, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 3
+shadow_offset = Vector2(0, 3)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nt538"]
+bg_color = Color(0.423529, 0.435294, 0.529412, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+expand_margin_left = 10.0
+expand_margin_right = 10.0
+shadow_size = 6
+shadow_offset = Vector2(0, 3)
+
+[node name="Object" instance=ExtResource("1_6kidm")]
+offset_right = 200.0
+offset_bottom = 230.0
+scale = Vector2(0.143, 0.148)
+texture_normal = ExtResource("2_6kidm")
+texture_pressed = ExtResource("2_6kidm")
+texture_hover = ExtResource("2_6kidm")
+texture_disabled = ExtResource("2_6kidm")
+script = ExtResource("3_jw21p")
+ColorBugged = Color(0.878431, 0.658824, 0.678431, 1)
+ColorUnusable = Color(0.627451, 0.627451, 0.627451, 1)
+Actions = Array[ExtResource("4_sfwkh")]([SubResource("Resource_a4bpl")])
+
+[node name="CloudPopUp" parent="." index="0"]
+offset_left = 5.80671
+offset_top = -74.3243
+offset_right = 24.8067
+offset_bottom = -53.3243
+scale = Vector2(1.83, 1.83)
+
+[node name="CloudImage" parent="CloudPopUp" index="0"]
+offset_left = -52.8502
+offset_top = -36.9222
+offset_right = -4.85018
+offset_bottom = 14.0778
+scale = Vector2(1.83, 1.83)
+
+[node name="Icon" parent="CloudPopUp/CloudImage" index="0"]
+scale = Vector2(1.83, 1.83)
+
+[node name="Modifier" parent="." index="1"]
+offset_left = -83.9161
+offset_top = 13.5135
+offset_right = -35.916
+offset_bottom = 62.5135
+scale = Vector2(1.83, 1.83)
+
+[node name="FlowContainer" parent="." index="2"]
+offset_left = -230.769
+offset_top = -94.5946
+offset_right = -55.7695
+offset_bottom = -54.5946
+scale = Vector2(5.715, 5.715)
+
+[node name="TurnOn" type="Button" parent="FlowContainer" index="0"]
+layout_mode = 2
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_tbpip")
+theme_override_font_sizes/font_size = 14
+theme_override_styles/hover = SubResource("StyleBoxFlat_dldhf")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_oj7jo")
+theme_override_styles/normal = SubResource("StyleBoxFlat_nt538")
+text = "ПАНИКА"
+
+[connection signal="pressed" from="FlowContainer/TurnOn" to="." method="Toggle" binds= [0]]
