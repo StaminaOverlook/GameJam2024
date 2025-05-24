@@ -1,0 +1,89 @@
+[gd_scene load_steps=10 format=3 uid="uid://dllaocepncct0"]
+
+[ext_resource type="PackedScene" uid="uid://btjcktrnlkns5" path="res://Scripts/Objects/Object.tscn" id="1_41siw"]
+[ext_resource type="Texture2D" uid="uid://bhap27lf3mf26" path="res://Assets/Objects/bath_empty.png" id="2_qgr3a"]
+[ext_resource type="Script" uid="uid://cmklju1612coa" path="res://Scripts/Objects/Objects/CoffeeMaker.gd" id="3_eebns"]
+[ext_resource type="Script" uid="uid://diox8oyhst3e8" path="res://Scripts/Objects/ObjectAction.gd" id="4_n2f0h"]
+[ext_resource type="FontFile" uid="uid://bp625sncpuuld" path="res://Assets/UI/CustomFontTtf16H30ForPaint.ttf" id="5_sgn3l"]
+
+[sub_resource type="Resource" id="Resource_41siw"]
+script = ExtResource("4_n2f0h")
+Name = "Открыть кран"
+Description = "Саня, бля.., бачок потик!"
+player_function_name = "Toggle"
+npc_function_name = "Toggle"
+metadata/_custom_type_script = "uid://diox8oyhst3e8"
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wokwr"]
+bg_color = Color(0.960784, 0.960784, 0.960784, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 6
+shadow_offset = Vector2(0, 3)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wg4ln"]
+bg_color = Color(0.839216, 0.85098, 0.886275, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 3
+shadow_offset = Vector2(0, 3)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6pngj"]
+bg_color = Color(0.423529, 0.435294, 0.529412, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+expand_margin_left = 10.0
+expand_margin_right = 10.0
+shadow_size = 6
+shadow_offset = Vector2(0, 3)
+
+[node name="Object" instance=ExtResource("1_41siw")]
+offset_right = 19.0
+offset_bottom = 19.0
+scale = Vector2(1.453, 1.506)
+texture_normal = ExtResource("2_qgr3a")
+texture_pressed = ExtResource("2_qgr3a")
+texture_hover = ExtResource("2_qgr3a")
+texture_disabled = ExtResource("2_qgr3a")
+script = ExtResource("3_eebns")
+ColorBugged = Color(0.878431, 0.658824, 0.678431, 1)
+ColorUnusable = Color(0.627451, 0.627451, 0.627451, 1)
+Actions = Array[ExtResource("4_n2f0h")]([SubResource("Resource_41siw")])
+
+[node name="CloudPopUp" parent="." index="0"]
+scale = Vector2(0.877705, 0.620593)
+
+[node name="CloudImage" parent="CloudPopUp" index="0"]
+offset_left = -5.8538
+offset_top = 45.6497
+offset_right = 42.1462
+offset_bottom = 96.6497
+
+[node name="FlowContainer" parent="." index="2"]
+offset_left = 39.9174
+offset_top = -1.32802
+offset_right = 123.917
+offset_bottom = 14.672
+scale = Vector2(0.724708, 0.920319)
+
+[node name="TurnOn" type="Button" parent="FlowContainer" index="0"]
+layout_mode = 2
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_sgn3l")
+theme_override_font_sizes/font_size = 14
+theme_override_styles/hover = SubResource("StyleBoxFlat_wokwr")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_wg4ln")
+theme_override_styles/normal = SubResource("StyleBoxFlat_6pngj")
+text = "Открыть кран"
+
+[connection signal="pressed" from="FlowContainer/TurnOn" to="." method="Toggle" binds= [0]]
