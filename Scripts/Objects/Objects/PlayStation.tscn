@@ -1,0 +1,74 @@
+[gd_scene load_steps=10 format=3 uid="uid://dwgcl61pah7e3"]
+
+[ext_resource type="PackedScene" uid="uid://btjcktrnlkns5" path="res://Scripts/Objects/Object.tscn" id="1_mgy8i"]
+[ext_resource type="Texture2D" uid="uid://cvddqhd12dq6f" path="res://Assets/Objects/playstation.png" id="2_mgy8i"]
+[ext_resource type="Script" uid="uid://cmklju1612coa" path="res://Scripts/Objects/Objects/CoffeeMaker.gd" id="3_pkqkp"]
+[ext_resource type="Script" uid="uid://diox8oyhst3e8" path="res://Scripts/Objects/ObjectAction.gd" id="4_081rp"]
+[ext_resource type="FontFile" uid="uid://bp625sncpuuld" path="res://Assets/UI/CustomFontTtf16H30ForPaint.ttf" id="5_24kg2"]
+
+[sub_resource type="Resource" id="Resource_ney80"]
+script = ExtResource("4_081rp")
+Name = "Включить приставку"
+Description = "Твой разум захвачен на несколько часов!"
+player_function_name = "Toggle"
+npc_function_name = "Toggle"
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7usky"]
+bg_color = Color(0.960784, 0.960784, 0.960784, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 6
+shadow_offset = Vector2(0, 3)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bs5qn"]
+bg_color = Color(0.839216, 0.85098, 0.886275, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 3
+shadow_offset = Vector2(0, 3)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d684o"]
+bg_color = Color(0.423529, 0.435294, 0.529412, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+expand_margin_left = 10.0
+expand_margin_right = 10.0
+shadow_size = 6
+shadow_offset = Vector2(0, 3)
+
+[node name="Object" instance=ExtResource("1_mgy8i")]
+texture_normal = ExtResource("2_mgy8i")
+texture_pressed = ExtResource("2_mgy8i")
+texture_hover = ExtResource("2_mgy8i")
+texture_disabled = ExtResource("2_mgy8i")
+script = ExtResource("3_pkqkp")
+Name = "Robovac"
+Actions = Array[ExtResource("4_081rp")]([SubResource("Resource_ney80")])
+
+[node name="FlowContainer" parent="." index="2"]
+offset_left = -22.5
+offset_top = -30.0
+offset_right = 75.5
+offset_bottom = 10.0
+
+[node name="TurnOn" type="Button" parent="FlowContainer" index="0"]
+layout_mode = 2
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_24kg2")
+theme_override_font_sizes/font_size = 14
+theme_override_styles/hover = SubResource("StyleBoxFlat_7usky")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bs5qn")
+theme_override_styles/normal = SubResource("StyleBoxFlat_d684o")
+text = "Включить приставку."
+
+[connection signal="pressed" from="FlowContainer/TurnOn" to="." method="Toggle" binds= [0]]
