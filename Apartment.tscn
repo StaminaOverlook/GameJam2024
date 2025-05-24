@@ -20,7 +20,11 @@
 [ext_resource type="PackedScene" uid="uid://c6hprii6v5i6i" path="res://Scripts/Objects/Objects/Phone.tscn" id="16_vud6j"]
 [ext_resource type="PackedScene" uid="uid://82cnwpld3p4y" path="res://Scripts/Objects/Objects/Robovac.tscn" id="17_m3wsp"]
 [ext_resource type="PackedScene" uid="uid://bodthbb4guhaj" path="res://Scripts/Objects/Objects/SmartPanel.tscn" id="18_o8sn0"]
+<<<<<<< HEAD
 [ext_resource type="PackedScene" uid="uid://dllaocepncct0" path="res://Scripts/Objects/Objects/bath.tscn" id="19_vqkpi"]
+=======
+[ext_resource type="PackedScene" uid="uid://dt5nnyuflnitu" path="res://Scripts/Objects/Objects/sir.tscn" id="19_vqkpi"]
+>>>>>>> 7e3830850ab27b8b1454cd841579f67c8e816efc
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_3vrxt"]
 vertices = PackedVector2Array(8, -4, 8, 4, 4, 8, -4, 8, -8, 4, -8, -4, -4, -8, 4, -8)
@@ -403,6 +407,12 @@ offset_left = 225.0
 offset_top = 607.0
 offset_right = 258.0
 offset_bottom = 640.0
+
+[node name="Sir" parent="Objects" instance=ExtResource("19_vqkpi")]
+offset_left = 648.0
+offset_top = 250.0
+offset_right = 862.0
+offset_bottom = 494.0
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(640, 360)
