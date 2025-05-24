@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=4 uid="uid://8cbgxlnb2tmb"]
+[gd_scene load_steps=32 format=4 uid="uid://8cbgxlnb2tmb"]
 
 [ext_resource type="Script" uid="uid://cegunpnwjmpnn" path="res://Scripts/CameraPlayer.gd" id="1_jh2oc"]
 [ext_resource type="Script" uid="uid://b6ftsffscb45l" path="res://GameMaster.gd" id="1_ktbo2"]
@@ -20,6 +20,7 @@
 [ext_resource type="PackedScene" uid="uid://c6hprii6v5i6i" path="res://Scripts/Objects/Objects/Phone.tscn" id="16_vud6j"]
 [ext_resource type="PackedScene" uid="uid://82cnwpld3p4y" path="res://Scripts/Objects/Objects/Robovac.tscn" id="17_m3wsp"]
 [ext_resource type="PackedScene" uid="uid://bodthbb4guhaj" path="res://Scripts/Objects/Objects/SmartPanel.tscn" id="18_o8sn0"]
+[ext_resource type="PackedScene" uid="uid://dwgcl61pah7e3" path="res://Scripts/Objects/Objects/PlayStation.tscn" id="21_vqkpi"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_3vrxt"]
 vertices = PackedVector2Array(8, -4, 8, 4, 4, 8, -4, 8, -8, 4, -8, -4, -4, -8, 4, -8)
@@ -417,3 +418,9 @@ offset_right = -5.0
 offset_bottom = 6.0
 metadata/_edit_use_anchors_ = true
 metadata/_edit_lock_ = true
+
+[node name="Object" parent="." instance=ExtResource("21_vqkpi")]
+offset_left = 835.0
+offset_top = 197.0
+offset_right = 865.0
+offset_bottom = 227.0
