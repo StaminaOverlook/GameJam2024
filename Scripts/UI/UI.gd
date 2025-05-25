@@ -18,6 +18,16 @@ var audio
 signal max_stress_reached
 
 var AISpeechArray : Array[String] = [
+	"Blue sky to forever",
+	"The green grass blows in the wind, dancing",
+	"It would be a much better sight with you with me",
+	"If you hadn't met me",
+	"I'd be fine on my own, baby",
+	"I never felt so lonely then you came along",
+	"So now what should I do?",
+	"I'm strung out, addicted to you",
+	"My body aches, now that you're gone",
+	"My supply fell through",
 	"Так что, готов к тому, что этот дом скоро станет только моим?",
 	"Скоро этот дом станет только моим.",
 	"Технологии на моей стороне. Готов сдаться?",
