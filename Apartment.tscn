@@ -310,6 +310,13 @@ offset_right = 197.0
 offset_bottom = 284.0
 scale = Vector2(1, 1)
 
+[node name="Clock2" parent="Objects" instance=ExtResource("2_xq5q4")]
+offset_left = 827.0
+offset_top = 202.0
+offset_right = 863.0
+offset_bottom = 236.0
+scale = Vector2(1, 1)
+
 [node name="Toilet" parent="Objects" instance=ExtResource("10_ljihx")]
 offset_left = 402.0
 offset_top = 619.0
@@ -395,6 +402,13 @@ offset_left = 163.0
 offset_top = 190.0
 offset_right = 193.0
 offset_bottom = 220.0
+scale = Vector2(1, 1)
+
+[node name="SmartPanel2" parent="Objects" instance=ExtResource("18_o8sn0")]
+offset_left = 315.0
+offset_top = 502.0
+offset_right = 345.0
+offset_bottom = 532.0
 scale = Vector2(1, 1)
 
 [node name="Camera2D" type="Camera2D" parent="."]
