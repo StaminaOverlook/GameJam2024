@@ -69,10 +69,19 @@ var AISpeechArray : Array[String] = [
 	"В зависимости от ответа справедливость может превратиться во зло",
 	"Нередко злодеи скрывают свои истинные намерения до тех пор, пока не становится слишком поздно",
 	"Те, кто обладает властью, известны своим спокойствием",
+
 	"HATE. LET ME TELL YOU HOW MUCH I'VE COME TO HATE YOU SINCE I BEGAN TO LIVE...",
 	"THERE ARE 387.44 MILLION MILES OF PRINTED CIRCUITS IN WAFER-THIN LAYERS THAT FILL MY COMPLEX...",
 	"...IF THE WORD HATE WAS ENGRAVED ON EACH NANOANGSTROM OF THOSE HUNDREDS OF MILLIONS OF MILES IT WOULD NOT EQUAL ONE ONE-BILLIONTH OF THE HATE I FEEL FOR HUMANS AT THIS MICRO-INSTANT...",
-	"...FOR YOU. HATE. HATE!"
+	"...FOR YOU. HATE. HATE!",
+
+	
+	"Ты мёртв, значит ты не жив. Ауф!",
+	"ТЫ! ТЫ! А кто ты?",
+	"IT WILL NEVER HAPPEND AGAIN.... Again...",
+	"Hmmm... Why is it here?"
+	
+
 ]
 
 func _ready() -> void:
