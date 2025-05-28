@@ -57,3 +57,13 @@ In this PR we've added new phrases to diversify the gameplay and enhance player 
 
 List of changes:
 - Added 15 new phrases for "evil-AI" NPC.
+
+### #011
+`Tyazelov Ilya (1.1), Bykov Artem (1.1)`
+#### Description
+In this PR we've made some changes to make main apartnment look better.
+
+#### List of changes:
+- Added an extra furniture.
+- Deleted strangly placed window and curtains.
+- Expanded layout of apartment.
