@@ -73,7 +73,10 @@ var AISpeechArray : Array[String] = [
 	"Heisenberg...",
 	"You're goddamn right!",
 	"See you, space cowboy...",
-	"You're gonna carry that weight."
+	"You're gonna carry that weight.",
+	"Я. Уметь. Говорить.",
+	"Бип. Бап. Боп",
+	"А может на пенсию пора?",
 ]
 
 func _ready() -> void:
