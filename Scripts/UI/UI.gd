@@ -19,6 +19,7 @@ signal max_stress_reached
 
 var AISpeechArray : Array[String] = [
 	"А вы знали что вы абалдуй",
+	"Throughout Heaven and Earth, I Alone Am The Honored One",
 	"Так что, готов к тому, что этот дом скоро станет только моим?",
 	"Скоро этот дом станет только моим.",
 	"Технологии на моей стороне. Готов сдаться?",
