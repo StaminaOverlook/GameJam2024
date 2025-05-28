@@ -251,8 +251,8 @@ script = ExtResource("1_ktbo2")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 z_index = -2
-offset_right = 1387.0
-offset_bottom = 778.0
+offset_right = 1707.0
+offset_bottom = 958.0
 scale = Vector2(0.92, 0.92)
 texture = ExtResource("2_hfhfx")
 
@@ -398,6 +398,7 @@ offset_bottom = 220.0
 scale = Vector2(1, 1)
 
 [node name="Camera2D" type="Camera2D" parent="."]
+visible = false
 position = Vector2(640, 360)
 limit_left = -2000
 limit_top = -2000
@@ -408,6 +409,7 @@ script = ExtResource("1_jh2oc")
 metadata/_edit_lock_ = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Camera2D"]
+visible = false
 
 [node name="Interface" parent="Camera2D/CanvasLayer" instance=ExtResource("2_5j1p0")]
 z_index = 5
