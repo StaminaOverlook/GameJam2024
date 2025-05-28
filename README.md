@@ -65,5 +65,5 @@ In this PR we've made some changes to make main apartnment look better.
 
 #### List of changes:
 - Added an extra furniture.
-- Deleted strangly placed window and curtains.
+- Deleted strangely placed window and curtains.
 - Expanded layout of apartment.
