@@ -57,3 +57,9 @@ In this PR we've added new phrases to diversify the gameplay and enhance player 
 
 List of changes:
 - Added 15 new phrases for "evil-AI" NPC.
+
+### #011
+`Bakaldin Kirill (1.2), Laine Maria (1.2)`
+#### Description
+
+Added 11 new phrases in UI.gd and 1 inprovment in GameMaster.gd
