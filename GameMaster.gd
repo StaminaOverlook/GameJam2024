@@ -28,3 +28,7 @@ func game_over() -> void:
 
 func _process(delta: float) -> void:
 	pass
+
+
+func _on_animated_sprite_2d_animation_changed() -> void:
+	pass # Replace with function body.

@@ -57,3 +57,8 @@ In this PR we've added new phrases to diversify the gameplay and enhance player 
 
 List of changes:
 - Added 15 new phrases for "evil-AI" NPC.
+
+### #011
+`Sinitsyn Elisey (1.3), Volkov Mikhail (1.3)`
+
+Добавили: кондиционер, музыкальная колонка, пылесос, часы, электронная панель

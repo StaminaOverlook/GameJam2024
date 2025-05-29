@@ -90,3 +90,7 @@ func _continue_movement():
 
 func _exit_game():
 	Interface.max_stress_reached.emit()
+
+
+func _on_animated_sprite_2d_property_list_changed() -> void:
+	pass # Replace with function body.
