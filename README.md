@@ -57,3 +57,8 @@ In this PR we've added new phrases to diversify the gameplay and enhance player 
 
 List of changes:
 - Added 15 new phrases for "evil-AI" NPC.
+
+### #011
+`Moshchanetskaya Maria (1.1), Mokrushina Olesya (1.4)`
+
+Here we added some new phrases for Robot.
