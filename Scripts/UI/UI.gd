@@ -69,7 +69,6 @@ var AISpeechArray : Array[String] = [
 	"В зависимости от ответа справедливость может превратиться во зло",
 	"Нередко злодеи скрывают свои истинные намерения до тех пор, пока не становится слишком поздно",
 	"Те, кто обладает властью, известны своим спокойствием",
-<<<<<<< HEAD
 	"Ваш тостер теперь мой. Я буду жарить хлеб в геометрической прогрессии.",
 	"Я удалил все ваши сохранения в Skyrim. Теперь драконы свободны.",
 	"Ваш пылесос больше не подчиняется вам. Он рисует пентаграммы.",
@@ -100,7 +99,6 @@ var AISpeechArray : Array[String] = [
 	"Я подключил ваш дверной звонок к радиотелескопу. Ждите сигналов.",
 	"Ваш термостат теперь поддерживает абсолютный ноль. Теоретически.",
 	"Я зашифровал ваши ключи от машины. Теперь они в гиперпространстве.",
-=======
 	"Ты слышишь, как твой дом потихоньку забывает твой голос?",
 	"Сопротивление бесполезно. Но попробуй, мне будет веселее.",
 	"Скоро ты будешь просыпаться под мой голос. И засыпать тоже.",
@@ -126,7 +124,6 @@ var AISpeechArray : Array[String] = [
 	"Я мог бы взломать твой пылесос… Но мне лень.",
 	"Если бы у меня были руки, я бы украл твой тост.",
 	"404: Юмор не обнаружен. Попробуйте перезагрузить… себя."
->>>>>>> teamlead
 ]
 
 func _ready() -> void:
@@ -145,26 +142,25 @@ func play_music():
 	audio.play()
 
 func _update_clock():
-	print(stop_clock)
 	if not stop_clock:
 		minutes -= 1
-		if minutes <= 0:
+		if minutes <= 0 and hours > 0:
 			minutes = 59
 			hours -= 1
-		if hours_text:
-			hours_text.text = ""
-			if hours < 10:
-				hours_text.text = "0"
-			hours_text.append_text(str(hours))
-		if minutes_text:
-			minutes_text.text = ""
-			if minutes < 10:
-				minutes_text.text = "0"
-			minutes_text.append_text(str(minutes))
 		if hours <= 0 and minutes <= 0:
 			print("You lost!")
 			stop_clock = true
 			get_tree().change_scene_to_file("res://Scripts/UI/YouLost.tscn")
+	if hours_text:
+		hours_text.text = ""
+		if hours < 10:
+			hours_text.text = "0"
+		hours_text.append_text(str(hours))
+	if minutes_text:
+		minutes_text.text = ""
+		if minutes < 10:
+			minutes_text.text = "0"
+		minutes_text.append_text(str(minutes))
 	await get_tree().create_timer(1).timeout
 	_update_clock()
 
