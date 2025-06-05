@@ -2,7 +2,7 @@ class_name UI
 extends Control
 
 var stress = 0 
-var stop_clock = false
+var stop_clock = true
 @export var hours = 5
 @export var minutes = 0
 
@@ -87,11 +87,12 @@ func play_music():
 	audio.play()
 
 func _update_clock():
+	print(stop_clock)
 	if not stop_clock:
-		minutes += 1
-		if minutes >= 60:
-			minutes = 0
-			hours += 1
+		minutes -= 1
+		if minutes <= 0:
+			minutes = 59
+			hours -= 1
 		if hours_text:
 			hours_text.text = ""
 			if hours < 10:
@@ -102,13 +103,14 @@ func _update_clock():
 			if minutes < 10:
 				minutes_text.text = "0"
 			minutes_text.append_text(str(minutes))
-		if hours >= 22:
+		if hours <= 0 and minutes <= 0:
 			print("You lost!")
 			stop_clock = true
 			get_tree().change_scene_to_file("res://Scripts/UI/YouLost.tscn")
-		await get_tree().create_timer(0.3).timeout
-		_update_clock()
+	await get_tree().create_timer(1).timeout
+	_update_clock()
 
+	
 func IncreaseStress() :
 	stress += 1
 	match stress:
@@ -148,7 +150,6 @@ func _on_Resume_pressed() -> void:
 	get_tree().paused = false
 	$PauseMenu.visible = false
 	stop_clock = false
-	_update_clock()
 
 func _on_Options_pressed() -> void:
 	pass # Replace with function body.
