@@ -54,9 +54,11 @@ Added 2 new rooms with furniture.
 `Grishin Daniil (1.2), Litvinchuk Roman (1.2)`
 
 ### #011
-`Вилесова Валерия (1.3), Серебрянский Константин (1.2)`
 
-Добавили новые реплики.
+`Vilesova Valeria (1.3), Serebryansky Konstantin (1.2)`
+
+Добавили новые реплики
+
 
 #### Description
 In this PR we've added new phrases to diversify the gameplay and enhance player interaction. We aimed to make the replicas more interesting, immersive and a little bit humorous.
