@@ -53,7 +53,7 @@ Added 2 new rooms with furniture.
 ### #010
 `Grishin Daniil (1.2), Litvinchuk Roman (1.2)`
 
-### #006 Sprite Character Update
+### #011
 `Вилесова Валерия (1.3), Серебрянский Константин (1.2)`
 
 Добавили новые реплики.
