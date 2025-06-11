@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=4 uid="uid://8cbgxlnb2tmb"]
+[gd_scene load_steps=32 format=4 uid="uid://8cbgxlnb2tmb"]
 
 [ext_resource type="Script" uid="uid://cegunpnwjmpnn" path="res://Scripts/CameraPlayer.gd" id="1_jh2oc"]
 [ext_resource type="Script" uid="uid://b6ftsffscb45l" path="res://GameMaster.gd" id="1_ktbo2"]
@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://b3npu47n6bheh" path="res://Assets/UI/HUD/back.png" id="2_hfhfx"]
 [ext_resource type="Texture2D" uid="uid://ci3v0y1107qlu" path="res://Assets/Tiles/Tilemap.png" id="2_tpbot"]
 [ext_resource type="PackedScene" uid="uid://cj454rliywua5" path="res://Scripts/Objects/Objects/Alarm Clock.tscn" id="2_xq5q4"]
-[ext_resource type="PackedScene" uid="uid://csi4le46i2bd3" path="res://Scripts/Human/Human.tscn" id="4_g71bu"]
+[ext_resource type="PackedScene" uid="uid://csi4le46i2bd3" path="res://Scripts/Human.tscn" id="4_g71bu"]
 [ext_resource type="PackedScene" uid="uid://d4cq5cpmxbkwg" path="res://Scripts/Objects/Objects/TV.tscn" id="6_siyc6"]
 [ext_resource type="PackedScene" uid="uid://ctx50sdpwra27" path="res://Scripts/Objects/Objects/Curtains.tscn" id="8_b43rg"]
 [ext_resource type="PackedScene" uid="uid://xf2kbk82p0gr" path="res://Scripts/Objects/Objects/MusicBox.tscn" id="9_kh1mq"]
@@ -20,6 +20,7 @@
 [ext_resource type="PackedScene" uid="uid://c6hprii6v5i6i" path="res://Scripts/Objects/Objects/Phone.tscn" id="16_vud6j"]
 [ext_resource type="PackedScene" uid="uid://82cnwpld3p4y" path="res://Scripts/Objects/Objects/Robovac.tscn" id="17_m3wsp"]
 [ext_resource type="PackedScene" uid="uid://bodthbb4guhaj" path="res://Scripts/Objects/Objects/SmartPanel.tscn" id="18_o8sn0"]
+[ext_resource type="PackedScene" uid="uid://dxmtiwflr0e32" path="res://Scripts/Objects/Objects/AlarmClock2.tscn" id="21_vqkpi"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_3vrxt"]
 vertices = PackedVector2Array(8, -4, 8, 4, 4, 8, -4, 8, -8, 4, -8, -4, -4, -8, 4, -8)
@@ -417,3 +418,9 @@ offset_right = -5.0
 offset_bottom = 6.0
 metadata/_edit_use_anchors_ = true
 metadata/_edit_lock_ = true
+
+[node name="Object" parent="." instance=ExtResource("21_vqkpi")]
+offset_left = 827.0
+offset_top = 186.0
+offset_right = 857.0
+offset_bottom = 216.0
