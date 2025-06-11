@@ -57,3 +57,8 @@ In this PR we've added new phrases to diversify the gameplay and enhance player 
 
 List of changes:
 - Added 15 new phrases for "evil-AI" NPC.
+
+### #011
+`Scherbakov Marat (1.3), Mambetov Aslan (1.4)`
+
+Added main character speech lines.
