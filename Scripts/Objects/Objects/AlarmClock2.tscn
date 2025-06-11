@@ -1,15 +1,14 @@
-[gd_scene load_steps=10 format=3 uid="uid://cj454rliywua5"]
+[gd_scene load_steps=9 format=3 uid="uid://dxmtiwflr0e32"]
 
-[ext_resource type="PackedScene" uid="uid://btjcktrnlkns5" path="res://Scripts/Objects/Object.tscn" id="1_wdhc4"]
-[ext_resource type="Texture2D" uid="uid://cj1brwjp5pggn" path="res://Assets/Objects/Clock.png" id="2_em3ay"]
-[ext_resource type="Script" uid="uid://diox8oyhst3e8" path="res://Scripts/Objects/ObjectAction.gd" id="3_hfl4y"]
-[ext_resource type="Script" uid="uid://cv6b4rdvinm7m" path="res://Scripts/Objects/Objects/AlarmClock.gd" id="3_kml3i"]
-[ext_resource type="FontFile" uid="uid://bp625sncpuuld" path="res://Assets/UI/CustomFontTtf16H30ForPaint.ttf" id="4_hl0ke"]
+[ext_resource type="PackedScene" uid="uid://btjcktrnlkns5" path="res://Scripts/Objects/Object.tscn" id="1_tbmbl"]
+[ext_resource type="Script" uid="uid://cv6b4rdvinm7m" path="res://Scripts/Objects/Objects/AlarmClock.gd" id="3_twj88"]
+[ext_resource type="Script" uid="uid://diox8oyhst3e8" path="res://Scripts/Objects/ObjectAction.gd" id="4_rvad4"]
+[ext_resource type="FontFile" uid="uid://bp625sncpuuld" path="res://Assets/UI/CustomFontTtf16H30ForPaint.ttf" id="5_3rm0y"]
 
 [sub_resource type="Resource" id="Resource_45r7t"]
-script = ExtResource("3_hfl4y")
-Name = "Включить тревогу"
-Description = "Подъём! Кто-то проспал свое счастье, хехе!"
+script = ExtResource("4_rvad4")
+Name = "Создать 1001 напоминалку"
+Description = "Напоминаю, тебе сегодня нужно сдать лабу!"
 player_function_name = "Toggle"
 npc_function_name = "Toggle"
 
@@ -42,14 +41,10 @@ expand_margin_right = 10.0
 shadow_size = 6
 shadow_offset = Vector2(0, 3)
 
-[node name="Object" instance=ExtResource("1_wdhc4")]
-texture_normal = ExtResource("2_em3ay")
-texture_pressed = ExtResource("2_em3ay")
-texture_hover = ExtResource("2_em3ay")
-texture_disabled = ExtResource("2_em3ay")
-script = ExtResource("3_kml3i")
+[node name="Object" instance=ExtResource("1_tbmbl")]
+script = ExtResource("3_twj88")
 Name = "Будильник"
-Actions = Array[ExtResource("3_hfl4y")]([SubResource("Resource_45r7t")])
+Actions = Array[ExtResource("4_rvad4")]([SubResource("Resource_45r7t")])
 
 [node name="CloudImage" parent="CloudPopUp" index="0"]
 offset_left = -2.14287
@@ -71,11 +66,11 @@ theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("4_hl0ke")
+theme_override_fonts/font = ExtResource("5_3rm0y")
 theme_override_font_sizes/font_size = 14
 theme_override_styles/hover = SubResource("StyleBoxFlat_yfuqi")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_sqlbu")
 theme_override_styles/normal = SubResource("StyleBoxFlat_wj6ul")
-text = "Включить тревогу"
+text = "Создать 1001 напоминалку"
 
 [connection signal="pressed" from="FlowContainer/TurnOn" to="." method="Toggle" binds= [0]]
