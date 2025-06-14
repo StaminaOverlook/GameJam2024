@@ -57,3 +57,8 @@ In this PR we've added new phrases to diversify the gameplay and enhance player 
 
 List of changes:
 - Added 15 new phrases for "evil-AI" NPC.
+
+### #011
+`Mikhnev Vladimir (1.4), Safronov Gleb (1.1)`
+#### Description
+replay human sprite, add animation
