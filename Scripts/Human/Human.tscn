@@ -1,33 +1,22 @@
-[gd_scene load_steps=10 format=3 uid="uid://csi4le46i2bd3"]
+[gd_scene load_steps=14 format=3 uid="uid://csi4le46i2bd3"]
 
 [ext_resource type="Script" uid="uid://b45jtrvhxwndx" path="res://Scripts/Human/Human.gd" id="1_gc40w"]
-[ext_resource type="Texture2D" uid="uid://qu4f1wiwlslu" path="res://Assets/Human/Human.png" id="2_h3cpd"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_e60xb"]
-atlas = ExtResource("2_h3cpd")
-region = Rect2(0, 0, 16, 40)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_xjh3o"]
-atlas = ExtResource("2_h3cpd")
-region = Rect2(0, 0, 22, 69)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_trqym"]
-atlas = ExtResource("2_h3cpd")
-region = Rect2(22, 0, 22, 69)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_4rfae"]
-atlas = ExtResource("2_h3cpd")
-region = Rect2(44, 0, 22, 69)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_c8wql"]
-atlas = ExtResource("2_h3cpd")
-region = Rect2(66, 0, 22, 69)
+[ext_resource type="Texture2D" uid="uid://crspg2ekvgywv" path="res://Assets/Human/banan_1.png" id="2_3w0ku"]
+[ext_resource type="Texture2D" uid="uid://0t0juybp80hn" path="res://Assets/Human/banan_2.png" id="3_wvhs3"]
+[ext_resource type="Texture2D" uid="uid://blqj3cmxux5it" path="res://Assets/Human/banan_3.png" id="4_5b84d"]
+[ext_resource type="Texture2D" uid="uid://dikok0d0bc2tj" path="res://Assets/Human/banan_4.png" id="5_2j1rc"]
+[ext_resource type="Texture2D" uid="uid://7y7bg8gshjlj" path="res://Assets/Human/banan_5.png" id="6_rtqt7"]
+[ext_resource type="Texture2D" uid="uid://bea56bu6acfqr" path="res://Assets/Human/banan_6.png" id="7_2mxay"]
+[ext_resource type="Texture2D" uid="uid://csw6gumyc5vqp" path="res://Assets/Human/banan_7.png" id="8_6700p"]
+[ext_resource type="Texture2D" uid="uid://c8v816pek2ouk" path="res://Assets/Human/banan_8.png" id="9_6q62c"]
+[ext_resource type="Texture2D" uid="uid://cir25ctgpj0qd" path="res://Assets/Human/banan_9.png" id="10_c5vfx"]
+[ext_resource type="Texture2D" uid="uid://d4dhqqgdwlc17" path="res://Assets/Human/banan_10.png" id="11_rr353"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_onjo3"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_e60xb")
+"texture": ExtResource("2_3w0ku")
 }],
 "loop": true,
 "name": &"idle-front",
@@ -35,16 +24,34 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_xjh3o")
+"texture": ExtResource("2_3w0ku")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_trqym")
+"texture": ExtResource("3_wvhs3")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_4rfae")
+"texture": ExtResource("4_5b84d")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_c8wql")
+"texture": ExtResource("5_2j1rc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_rtqt7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_2mxay")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_6700p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_6q62c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_c5vfx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_rr353")
 }],
 "loop": true,
 "name": &"walking-front",
@@ -59,9 +66,10 @@ height = 2.0
 script = ExtResource("1_gc40w")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-2, -2)
+scale = Vector2(0.469136, 0.418675)
 sprite_frames = SubResource("SpriteFrames_onjo3")
-animation = &"walking-front"
-frame_progress = 0.11428
+animation = &"idle-front"
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
 

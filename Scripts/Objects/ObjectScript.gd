@@ -61,7 +61,7 @@ func DeactivatePopUp() :
 
 func ActivateModifier() :
 	$Modifier.visible = true
-	$Modifier/AnimationPlayer.play("Sparks")
+	$Modifier/AnimationPlayer.play("walking-front")
 
 func DeactivateModifier() :
 	$Modifier.visible = false
